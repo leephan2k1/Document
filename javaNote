@@ -1,0 +1,23 @@
+Primitive data type:
++byte [8bit] -128 -> 127;
++short [16bit] -32768 -> 32767;
++int [32bit] -2^31 -> 2^31 -1;
++long [64bit] -2^63 -> 2^63 -1;
+Vượt ra phạm vi của int nên khai báo: long ex = 214748212L;
++double [64bit] EX: double a=3.2;
++float [32bit] EX: float a = 3.2f;
++char [16bit] unicode
+
+=> For-each 
+for(int elements: arr){
+	//code
+}
+=> label break
+label:
+	for(expression1){
+		// code
+		for(expression2){
+		if(codition) break label;
+		// code
+		}
+	}
