@@ -21,3 +21,13 @@ label:
 		// code
 		}
 	}
+
+Có 3 kiểu Constructor:
++ Constructor không có đối số
+	private Constructor() {
+   	// body of constructor
+	}
++ Constructor Default
+	Nếu không có Constructor ko đối số nào được tạo, trình biên dịch tự khởi tạo Constructor làm nhiệm vụ khởi tạo các biến thực thể với giá trị mặc định.
+	=> https://ibb.co/8jgcrVT
++ Constructor Parameterized (Tham số hoá)
