@@ -23,6 +23,8 @@ label:
 	}
 
 Có 3 kiểu Constructor:
+	// Constructor không thể là một abstract, static hoặc final.
+	// Constructor có thể overload nhưng không thể override.
 	+ Constructor không có đối số
 		private Constructor() {
    		// body of constructor
@@ -31,6 +33,7 @@ Có 3 kiểu Constructor:
 		Nếu không có Constructor ko đối số nào được tạo, trình biên dịch tự khởi tạo Constructor làm nhiệm vụ khởi tạo các biến thực thể với giá trị mặc định.
 		=> https://ibb.co/8jgcrVT
 	+ Constructor Parameterized (Tham số hoá)
+		Constructor overloading: https://ibb.co/42h4yQ8
 2 Quy tắc để khởi tạo 1 Constructor:
 	+ Cùng tên với tên Class.
 	+ Không có kiểu trả về.
