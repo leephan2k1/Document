@@ -41,3 +41,4 @@ Có 3 kiểu Constructor:
 STRING
 	//String là một lớp trong Java, khác với primitive type (long, int, short, byte, double, char,...)
 	+ Một số phương thức trong lớp String: https://ibb.co/pxf3Vpq
+	+ Document từ Oracle: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?fbclid=IwAR2JwZ4AJ6JGcvuSeaablfqq-cUDahBhqRM8peIcHj9Qgl7VmNYULMyVn1U
