@@ -47,6 +47,6 @@ ACCESS MODIFIER (Có 4 kiểu)
 	+ private : Chỉ dùng được trong lớp.
 	+ protected : Chỉ dùng trong package hoặc subclass
 	+ public : Dùng được ở mọi nơi
-	+ //Note: Không thể khai báo 1 class ở mức private hoặc protected.
+	+ //Note: Không thể khai báo 1 class và interfaces ở mức private hoặc protected.
 	
 	
