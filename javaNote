@@ -22,7 +22,7 @@ label:
 		}
 	}
 
-Có 3 kiểu Constructor:
+CONSTRUCTOR (Có 3 kiểu)
 	// Constructor không thể là một abstract, static hoặc final.
 	// Constructor có thể overload nhưng không thể override.
 	+ Constructor không có đối số
@@ -42,3 +42,11 @@ STRING
 	//String là một lớp trong Java, khác với primitive type (long, int, short, byte, double, char,...)
 	+ Một số phương thức trong lớp String: https://ibb.co/pxf3Vpq
 	+ Document từ Oracle: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?fbclid=IwAR2JwZ4AJ6JGcvuSeaablfqq-cUDahBhqRM8peIcHj9Qgl7VmNYULMyVn1U
+ACCESS MODIFIER (Có 4 kiểu)
+	+ default : Chỉ dùng được trong package ( package private)
+	+ private : Chỉ dùng được trong lớp.
+	+ protected : Chỉ dùng trong package hoặc subclass
+	+ public : Dùng được ở mọi nơi
+	+ //Note: Không thể khai báo 1 class ở mức private hoặc protected.
+	
+	
