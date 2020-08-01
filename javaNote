@@ -37,3 +37,7 @@ Có 3 kiểu Constructor:
 2 Quy tắc để khởi tạo 1 Constructor:
 	+ Cùng tên với tên Class.
 	+ Không có kiểu trả về.
+	
+STRING
+	//String là một lớp trong Java, khác với primitive type (long, int, short, byte, double, char,...)
+	+ Một số phương thức trong lớp String: https://ibb.co/pxf3Vpq
