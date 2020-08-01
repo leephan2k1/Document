@@ -23,11 +23,14 @@ label:
 	}
 
 Có 3 kiểu Constructor:
-+ Constructor không có đối số
-	private Constructor() {
-   	// body of constructor
-	}
-+ Constructor Default
-	Nếu không có Constructor ko đối số nào được tạo, trình biên dịch tự khởi tạo Constructor làm nhiệm vụ khởi tạo các biến thực thể với giá trị mặc định.
-	=> https://ibb.co/8jgcrVT
-+ Constructor Parameterized (Tham số hoá)
+	+ Constructor không có đối số
+		private Constructor() {
+   		// body of constructor
+		}
+	+ Constructor Default
+		Nếu không có Constructor ko đối số nào được tạo, trình biên dịch tự khởi tạo Constructor làm nhiệm vụ khởi tạo các biến thực thể với giá trị mặc định.
+		=> https://ibb.co/8jgcrVT
+	+ Constructor Parameterized (Tham số hoá)
+2 Quy tắc để khởi tạo 1 Constructor:
+	+ Cùng tên với tên Class.
+	+ Không có kiểu trả về.
