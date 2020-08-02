@@ -48,5 +48,18 @@ ACCESS MODIFIER (Có 4 kiểu)
 	+ protected : Chỉ dùng trong package hoặc subclass
 	+ public : Dùng được ở mọi nơi
 	+ //Note: Không thể khai báo 1 class và interfaces ở mức private hoặc protected.
+KEYWORD:
+	//this
+	+ this. : Dùng để tham chiếu đến biến instance. Tránh nhầm lẫn khi instance với đối số cùng name.
+	+ Biến thể của this. là this() <=> this() để truyền đối số với construct tương ứng khi viết construct overload. VI DU: http://codepad.org/gtwtkSnw
+	+ this dùng làm tham số để truyền vào phương thức. VD: http://codepad.org/BtT1QHjG
+	//final
+	+final dùng để chỉ hằng số. Có thể dùng cho class, variables, method
+		//Với Biến: Không thể tái cấp phát 
+		//Với medthod: Không thể overload
+		//Với class: Không thể extend
+		//Các biến final (nên) được viết hoa. VD fianl int MAX = 100;
+Inheritance (Kế thừa)
+	
 	
 	
