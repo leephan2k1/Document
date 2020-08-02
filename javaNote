@@ -3,24 +3,24 @@ Primitive data type:
 +short [16bit] -32768 -> 32767;
 +int [32bit] -2^31 -> 2^31 -1;
 +long [64bit] -2^63 -> 2^63 -1;
-Vượt ra phạm vi của int nên khai báo: long ex = 214748212L;
+	//Vượt ra phạm vi của int nên khai báo: long ex = 214748212L;
 +double [64bit] EX: double a=3.2;
 +float [32bit] EX: float a = 3.2f;
 +char [16bit] unicode
 
-=> For-each 
-for(int elements: arr){
-	//code
-}
-=> label break
-label:
-	for(expression1){
-		// code
-		for(expression2){
-		if(codition) break label;
-		// code
-		}
+FOR-EACH
+	for(int elements: arr){
+		//code
 	}
+LABEL BREAK
+	label:
+		for(expression1){
+			// code
+			for(expression2){
+				if(codition) break label;
+			}
+		}
+		// code
 
 CONSTRUCTOR (Có 3 kiểu)
 	// Constructor không thể là một abstract, static hoặc final.
@@ -59,7 +59,13 @@ KEYWORD:
 		//Với medthod: Không thể overload
 		//Với class: Không thể extend
 		//Các biến final (nên) được viết hoa. VD fianl int MAX = 100;
-Inheritance (Kế thừa)
+Inheritance (5 kiểu Kế thừa)
+	+ Single: Lớp B được extends từ lớp A, A->B.
+	+ Multilevel: Lớp B extends từ lớp A, lớp C extends từ lớp B, A->B->C.
+	+ Hierarchical (thứ bậc): Lớp B,C,D,... extends từ lớp A. A->B; A->C; A->C; A->D,...
+	+ Mutiple: Lớp C được extends từ Lớp A, Lớp B, Lớp D,.. A->C, B->C, D->C,...
+	+ Hybird: Kết hợp 2 hay nhiều kiểu trên.
+	//Java không hỗ trợ Mutiple và Hybird cho kế thừa class, nhưng Interface thì được.
 	
 	
 	
