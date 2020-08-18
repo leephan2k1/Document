@@ -42,7 +42,10 @@ STRING
 	//String là một lớp trong Java, khác với primitive type (long, int, short, byte, double, char,...)
 	+ Một số phương thức trong lớp String: https://ibb.co/pxf3Vpq
 	+ Document từ Oracle: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?fbclid=IwAR2JwZ4AJ6JGcvuSeaablfqq-cUDahBhqRM8peIcHj9Qgl7VmNYULMyVn1U
-ACCESS MODIFIER (Có 4 kiểu)
+ACCESS MODIFIER 
+	https://www.w3schools.com/java/java_modifiers.asp
+	+ abstract (Đối với class): Khi khởi tạo 1 abstract class, thì k thể khởi tạo đối tượng từ class mà chỉ có thể kế thừa.
+	(Có 4 kiểu AM)
 	+ default : Chỉ dùng được trong package ( package private)
 	+ private : Chỉ dùng được trong lớp.
 	+ protected : Chỉ dùng trong package hoặc subclass
@@ -59,6 +62,11 @@ KEYWORD:
 		//Với medthod: Không thể overload
 		//Với class: Không thể extend
 		//Các biến final (nên) được viết hoa. VD fianl int MAX = 100;
+	//instanceof (return: true or false)
+		+Dùng để kiểm tra một biến thực thể có phải tạo ra từ class hay không
+		Ví dụ: 	String name = "Lee";
+			boolean check = name instanceof String;
+			System.out.println(check) == true.
 Inheritance (5 kiểu Kế thừa)
 	+ Single: Lớp B được extends từ lớp A, A->B.
 	+ Multilevel: Lớp B extends từ lớp A, lớp C extends từ lớp B, A->B->C.
@@ -66,6 +74,16 @@ Inheritance (5 kiểu Kế thừa)
 	+ Mutiple: Interface C được extends từ Interface A, Interface B, Interface D,.. A->C, B->C, D->C,...
 	+ Hybird: Kết hợp 2 hay nhiều kiểu trên.
 	//Java không hỗ trợ Mutiple và Hybird cho kế thừa class, nhưng Interface thì được.
+        //Nếu không muốn lớp khác extends từ class đã tạo, thêm từ khoá final (EX: final class Animal{ } )
+	>>>Một số lưu ý khi kế thừa:
+	+ Các thành phần private của superclass thì lớp con không thể kế thừa
+	+ Lớp con có thể kế thừa tất cả thành phần của superclass. Tuy nhiên, Constructors thì không vì nó k phải là một "member" của class
+	Constructors của superclass có thể truyền thông qua từ lớp con.
+	+ Lớp cha chỉ có duy nhất: Lớp cha có thể có nhiều lớp con. Tuy nhiên, lớp con chỉ có duy nhất lớp cha (Triết lý nhân sinh =)) )
+	Trong Java chỉ hỗ trợ kế thừ đa cấp (Mutiple) và kế thừa kết hợp (Hybird) cho Interface.
+	+ Trong trường hợp không có lớp cha rõ ràng nào. Thì default superclass được hiểu ngầm là Object class.
+	
+	
 	
 	
 	
