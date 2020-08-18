@@ -53,11 +53,11 @@ ACCESS MODIFIER
 	+ //Note: Không thể khai báo 1 class và interfaces ở mức private hoặc protected.
 KEYWORD:
 	//this
-	+ this. : Dùng để tham chiếu đến biến instance. Tránh nhầm lẫn khi instance với đối số cùng name.
-	+ Biến thể của this. là this() <=> this() để truyền đối số với construct tương ứng khi viết construct overload. VI DU: http://codepad.org/gtwtkSnw
-	+ this dùng làm tham số để truyền vào phương thức. VD: http://codepad.org/BtT1QHjG
+		+ this. : Dùng để tham chiếu đến biến instance. Tránh nhầm lẫn khi instance với đối số cùng name.
+		+ Biến thể của this. là this() <=> this() để truyền đối số với construct tương ứng khi viết construct overload. VI DU: http://codepad.org/gtwtkSnw
+		+ this dùng làm tham số để truyền vào phương thức. VD: http://codepad.org/BtT1QHjG
 	//final
-	+final dùng để chỉ hằng số. Có thể dùng cho class, variables, method
+		+final dùng để chỉ hằng số. Có thể dùng cho class, variables, method
 		//Với Biến: Không thể tái cấp phát 
 		//Với medthod: Không thể overload
 		//Với class: Không thể extend
@@ -67,10 +67,12 @@ KEYWORD:
 		Ví dụ: 	String name = "Lee";
 			boolean check = name instanceof String;
 			System.out.println(check) == true.
+	//super
+		+ Dùng để truy cập vào method lớp cha từ lớp con VD: https://www.programiz.com/java-programming/method-overriding
 Inheritance (5 kiểu Kế thừa)
 	+ Single: Lớp B được extends từ lớp A, A->B.
-	+ Multilevel: Lớp B extends từ lớp A, lớp C extends từ lớp B, A->B->C.
-	+ Hierarchical (thứ bậc): Lớp B,C,D,... extends từ lớp A. A->B; A->C; A->C; A->D,...
+	+ Multilevel: Lớp B extends A, lớp C extends B, A->B->C.
+	+ Hierarchical (thứ bậc): Lớp B,C,D,... extends từ lớp A. A->B; A->C; A->D,...
 	+ Mutiple: Interface C được extends từ Interface A, Interface B, Interface D,.. A->C, B->C, D->C,...
 	+ Hybird: Kết hợp 2 hay nhiều kiểu trên.
 	//Java không hỗ trợ Mutiple và Hybird cho kế thừa class, nhưng Interface thì được.
@@ -82,6 +84,25 @@ Inheritance (5 kiểu Kế thừa)
 	+ Lớp cha chỉ có duy nhất: Lớp cha có thể có nhiều lớp con. Tuy nhiên, lớp con chỉ có duy nhất lớp cha (Triết lý nhân sinh =)) )
 	Trong Java chỉ hỗ trợ kế thừ đa cấp (Mutiple) và kế thừa kết hợp (Hybird) cho Interface.
 	+ Trong trường hợp không có lớp cha rõ ràng nào. Thì default superclass được hiểu ngầm là Object class.
+Encapsulation (Tính bao đóng)
+	+ Tính bao đóng khi có các biến, thuộc tính khai báo kiểu private (Chỉ dùng được trong phạm vi class)
+	+ Tính bao đóng dùng các phương thức public set(nhận giá trị) và get() trả về giá trị cho các biến trong Class có dạng private
+	>>> Ưu điểm có tính bao đóng:
+		+ Ẩn dữ liệu, tăng tính bảo mật: Người dùng chỉ biết truyền và nhận dữ liệu thông qua 2 phương thức get và set, mà không biết trong class đó 
+		đang lưu trữ các loại dữ liệu gì.
+		+ Tăng tính linh hoạt: Có thể làm cho các biến ở dạng chỉ đọc (Bỏ phương thức set() ) hoặc ở dạng chỉ ghi (Bỏ phương thức get() ). 
+		Có thể thay đổi một phần code mà không làm ảnh hưởng đến các phần khác.
+		+ Dễ dàng tái sử dụng
+		+ Dễ dàng kiểm thử đơn vị (Unit testing)
+Overriding và Overloading
+	//Overriding
+	+ Overriding: Được biết là khi method của subclass (CÙNG TÊN, CÙNG SỐ LƯỢNG THAM SỐ, CÙNG KIỂU TRẢ VỀ)
+	với method superclass. Khi object gọi method này, method ở subclass sẽ được thực thi.
+	+ Không thể Overriding với một method final hoặc static. (Chương tình báo lỗi)
+	+ Chỉ nên Overriding một abstract method với lớp cha.
+	//Overloading
+		
+	
 	
 	
 	
