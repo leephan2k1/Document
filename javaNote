@@ -121,7 +121,7 @@ Abstract Class (Lớp trừu tượng)
 		VD chi tiết: https://www.programiz.com/java-programming/abstract-classes-methods
 	+ Một abstract method khai báo chỉ để định nghĩa, ko có gì trong body method này. 
 		VD abstract void show();
-	>>> Chỉ có abstract class mới có thể chứa abstract method. Nếu khai báo 1 abstract method trong một class bình thường chương trình báo lỗi!
+	>>> Chỉ có abstract class mới có thể chứa abstract method. Nếu khai báo 1 abstract method trong một class ko là kiểu abstract chương trình báo lỗi!
 	>>> Để truy cập vào method trong abstract class, cần extends subclass để kế thừa và gọi từ lớp con.
 	>>> Bắt buộc phải ghi đè (Override) abstract method từ superclass, nếu subclass cũng là abstract thì khỏi cần override.
 	*** So sánh giữa một Data Abstract và Encapsulation
@@ -131,6 +131,14 @@ Abstract Class (Lớp trừu tượng)
 	>>> Ưu điểm: 
 		+ Tránh trùng lặp code và tái sử dụng
 		+ Tăng cường tính bảo mật của chương trình, ứng dụng khi cung cấp cho người dùng.
+Interface
+	+ Interface là một bản thiết kế cho class để class tuân theo và thực thi. Interface chỉ chứa các abstract method và các fields ở dạng public static final.
+	+ Sử dụng từ khoá 'implements' để triển khai 1 interface từ 1 class khác.
+		VD: http://codepad.org/k5VTz3oN
+	+ 1 class có thể implemnts một lúc nhiều interface
+		VD: http://codepad.org/Z9FwBKfP
+	
+	
 		
 	
 	
