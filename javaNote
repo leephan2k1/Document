@@ -94,13 +94,27 @@ Encapsulation (Tính bao đóng)
 		Có thể thay đổi một phần code mà không làm ảnh hưởng đến các phần khác.
 		+ Dễ dàng tái sử dụng
 		+ Dễ dàng kiểm thử đơn vị (Unit testing)
-Overriding và Overloading
+Overriding và Overloading: https://docs.oracle.com/javase/tutorial/java/IandI/override.html
 	//Overriding
 	+ Overriding: Được biết là khi method của subclass (CÙNG TÊN, CÙNG SỐ LƯỢNG THAM SỐ, CÙNG KIỂU TRẢ VỀ)
 	với method superclass. Khi object gọi method này, method ở subclass sẽ được thực thi.
-	+ Không thể Overriding với một method final hoặc static. (Chương tình báo lỗi)
-	+ Chỉ nên Overriding một abstract method với lớp cha.
+	+ Ví dụ: https://www.programiz.com/java-programming/method-overriding
+	>>> Không thể Overriding với một method final hoặc static. (Chương tình báo lỗi)
+	>>> Chỉ nên Overriding một abstract method với lớp cha.
 	//Overloading
+	+ Overloading: Xảy ra khi các method cùng 1 class (CÙNG TÊN, CÙNG KIỂU TRẢ VỀ, KHÁC SỐ LƯỢNG THAM SỐ)
+	+ Ví dụ: https://www.geeksforgeeks.org/overloading-in-java/
+	+ Ưu điểm: Chỉ cần tạo ra 1 tên cho method cùng thực hiện chức năng tương tự, bớt rối cho việc đặt tên (VD: sum1, sum2, sum3,...)
+	>>> Không thể nạp chồng phương thức khác kiểu trả về (cùng số lượng tham số)
+	>>> Có thể nạp chồng phương thức kiểu static: https://www.geeksforgeeks.org/can-we-overload-or-override-static-methods-in-java/
+	>>> Không thể nạp chồng 2 phương thức khác keyword static (Cùng tham số): https://www.geeksforgeeks.org/can-we-overload-or-override-static-methods-in-java/
+	>>> Tự động ép kiểu nếu tham số truyền vào không khớp với tham số định nghĩa: https://viettuts.vn/images/java/nap-chong-trong-java-1.jpg
+	>>> Có thể nạp chồng phương thức main: https://www.geeksforgeeks.org/overloading-in-java/
+	>>> Java không cho phép người dùng nạp chồng toán tử như C++
+	*** Khác biệt giữa Overriding và OverLoading: https://imgur.com/a/MZdw2Bw
+	
+	
+	
 		
 	
 	
