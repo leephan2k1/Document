@@ -105,20 +105,33 @@ Overriding và Overloading: https://docs.oracle.com/javase/tutorial/java/IandI/o
 	+ Overloading: Xảy ra khi các method cùng 1 class (CÙNG TÊN, CÙNG KIỂU TRẢ VỀ, KHÁC SỐ LƯỢNG THAM SỐ)
 	+ Ví dụ: https://www.geeksforgeeks.org/overloading-in-java/
 	+ Ưu điểm: Chỉ cần tạo ra 1 tên cho method cùng thực hiện chức năng tương tự, bớt rối cho việc đặt tên (VD: sum1, sum2, sum3,...)
-	>>> Không thể nạp chồng phương thức khác kiểu trả về (cùng số lượng tham số)
+	>>> Không thể nạp chồng phương thức (cùng số lượng tham số) nhưng khác kiểu trả về.
 	>>> Có thể nạp chồng phương thức kiểu static: https://www.geeksforgeeks.org/can-we-overload-or-override-static-methods-in-java/
 	>>> Không thể nạp chồng 2 phương thức khác keyword static (Cùng tham số): https://www.geeksforgeeks.org/can-we-overload-or-override-static-methods-in-java/
 	>>> Tự động ép kiểu nếu tham số truyền vào không khớp với tham số định nghĩa: https://viettuts.vn/images/java/nap-chong-trong-java-1.jpg
 	>>> Có thể nạp chồng phương thức main: https://www.geeksforgeeks.org/overloading-in-java/
-	>>> Java không cho phép người dùng nạp chồng toán tử như C++
+	>>> Java không cho phép nạp chồng toán tử như C++
 	*** Khác biệt giữa Overriding và OverLoading: https://imgur.com/a/MZdw2Bw
 Abstract Class (Lớp trừu tượng)
 	+ Sử dụng keyword abstract để khai báo 1 abstract class
 	+ Không thể tạo object từ 1 abstract class
 	+ Có thể extends 1 class con từ 1 abstract class.
-	>>> Chỉ có abstract class mới có thể chứa abstract method. Nếu khai báo 1 abstract method trong một class bình thường chương trình báo lỗi
+	+ Một abstract class được khai báo ra để chứa các abstract method (Có thể có hoặc không). Các abstract method được định nghĩa ra cho các 
+	lớp con xử lí (Ví dụ khi ta nhấn phanh ga , ta chỉ biết là xe dừng lại. Chứ ko biết phanh ga hoạt động như thế nào)
+		VD chi tiết: https://www.programiz.com/java-programming/abstract-classes-methods
+	+ Một abstract method khai báo chỉ để định nghĩa, ko có gì trong body method này. 
+		VD abstract void show();
+	>>> Chỉ có abstract class mới có thể chứa abstract method. Nếu khai báo 1 abstract method trong một class bình thường chương trình báo lỗi!
 	>>> Để truy cập vào method trong abstract class, cần extends subclass để kế thừa và gọi từ lớp con.
 	>>> Bắt buộc phải ghi đè (Override) abstract method từ superclass, nếu subclass cũng là abstract thì khỏi cần override.
+	*** So sánh giữa một Data Abstract và Encapsulation
+		+ Thông tin thuộc tính bao đóng được ẩn đi, trong khi đó Abstract sẽ ẩn ở mức độ chi tiết (Ẩn cách thực thi của một phương thức)
+		+ Trong khi tính bao đóng nhóm các dữ liệu và các phương thức hoạt động dựa trên dữ liệu, còn Abstract hiển thị giao diện (interface)
+		cho người dùng và ẩn đi các chi tiết triển khai.
+	>>> Ưu điểm: 
+		+ Tránh trùng lặp code và tái sử dụng
+		+ Tăng cường tính bảo mật của chương trình, ứng dụng khi cung cấp cho người dùng.
+		
 	
 	
 	
