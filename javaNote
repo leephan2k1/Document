@@ -64,11 +64,15 @@ KEYWORD:
 		//Các biến final (nên) được viết hoa. VD fianl int MAX = 100;
 	//instanceof (return: true or false)
 		+Dùng để kiểm tra một biến thực thể có phải tạo ra từ class hay không
-		Ví dụ: 	String name = "Lee";
-			boolean check = name instanceof String;
-			System.out.println(check) == true.
+			Ví dụ: 	String name = "Lee";
+				boolean check = name instanceof String;
+				System.out.println(check) == true.
 	//super
 		+ Dùng để truy cập vào method lớp cha từ lớp con VD: https://www.programiz.com/java-programming/method-overriding
+	//var
+		+ Từ JDK 10, var dùng để tham chiếu đến một class khi khởi tạo đối tượng. Nhằm giảm bớt cú pháp khi khởi tạo.
+			VD: var list = new ArrayList<String>();
+			    var objectName = new className();
 Inheritance (5 kiểu Kế thừa)
 	+ Single: Lớp B được extends từ lớp A, A->B.
 	+ Multilevel: Lớp B extends A, lớp C extends B, A->B->C.
@@ -77,13 +81,14 @@ Inheritance (5 kiểu Kế thừa)
 	+ Hybird: Kết hợp 2 hay nhiều kiểu trên.
 	//Java không hỗ trợ Mutiple và Hybird cho kế thừa class, nhưng Interface thì được.
         //Nếu không muốn lớp khác extends từ class đã tạo, thêm từ khoá final (EX: final class Animal{ } )
+	//Khi một Object lớp cha tham chiếu đến lớp con, đó còn được gọi là Upcasting.
 	>>>Một số lưu ý khi kế thừa:
-	+ Các thành phần private của superclass thì lớp con không thể kế thừa
-	+ Lớp con có thể kế thừa tất cả thành phần của superclass. Tuy nhiên, Constructors thì không vì nó k phải là một "member" của class
-	Constructors của superclass có thể truyền thông qua từ lớp con.
-	+ Lớp cha chỉ có duy nhất: Lớp cha có thể có nhiều lớp con. Tuy nhiên, lớp con chỉ có duy nhất lớp cha (Triết lý nhân sinh =)) )
-	Trong Java chỉ hỗ trợ kế thừ đa cấp (Mutiple) và kế thừa kết hợp (Hybird) cho Interface.
-	+ Trong trường hợp không có lớp cha rõ ràng nào. Thì default superclass được hiểu ngầm là Object class.
+		+ Các thành phần private của superclass thì lớp con không thể kế thừa
+		+ Lớp con có thể kế thừa tất cả thành phần của superclass. Tuy nhiên, Constructors thì không vì nó k phải là một "member" của class
+		Constructors của superclass có thể truyền thông qua từ lớp con.
+		+ Lớp cha chỉ có duy nhất: Lớp cha có thể có nhiều lớp con. Tuy nhiên, lớp con chỉ có duy nhất lớp cha (Triết lý nhân sinh =)) )
+		Trong Java chỉ hỗ trợ kế thừ đa cấp (Mutiple) và kế thừa kết hợp (Hybird) cho Interface.
+		+ Trong trường hợp không có lớp cha rõ ràng nào. Thì default superclass được hiểu ngầm là Object class.
 Encapsulation (Tính bao đóng)
 	+ Tính bao đóng khi có các biến, thuộc tính khai báo kiểu private (Chỉ dùng được trong phạm vi class)
 	+ Tính bao đóng dùng các phương thức public set(nhận giá trị) và get() trả về giá trị cho các biến trong Class có dạng private
@@ -96,15 +101,15 @@ Encapsulation (Tính bao đóng)
 		+ Dễ dàng kiểm thử đơn vị (Unit testing)
 Overriding và Overloading: https://docs.oracle.com/javase/tutorial/java/IandI/override.html
 	//Overriding
-	+ Overriding: Được biết là khi method của subclass (CÙNG TÊN, CÙNG SỐ LƯỢNG THAM SỐ, CÙNG KIỂU TRẢ VỀ)
-	với method superclass. Khi object gọi method này, method ở subclass sẽ được thực thi.
-	+ Ví dụ: https://www.programiz.com/java-programming/method-overriding
+		+ Overriding: Được biết là khi method của subclass (CÙNG TÊN, CÙNG SỐ LƯỢNG THAM SỐ, CÙNG KIỂU TRẢ VỀ)
+		với method superclass. Khi object gọi method này, method ở subclass sẽ được thực thi.
+		+ Ví dụ: https://www.programiz.com/java-programming/method-overriding
 	>>> Không thể Overriding với một method final hoặc static. (Chương tình báo lỗi)
 	>>> Chỉ nên Overriding một abstract method với lớp cha.
 	//Overloading
-	+ Overloading: Xảy ra khi các method cùng 1 class (CÙNG TÊN, CÙNG KIỂU TRẢ VỀ, KHÁC SỐ LƯỢNG THAM SỐ)
-	+ Ví dụ: https://www.geeksforgeeks.org/overloading-in-java/
-	+ Ưu điểm: Chỉ cần tạo ra 1 tên cho method cùng thực hiện chức năng tương tự, bớt rối cho việc đặt tên (VD: sum1, sum2, sum3,...)
+		+ Overloading: Xảy ra khi các method cùng 1 class (CÙNG TÊN, CÙNG KIỂU TRẢ VỀ, KHÁC SỐ LƯỢNG THAM SỐ)
+		+ Ví dụ: https://www.geeksforgeeks.org/overloading-in-java/
+		+ Ưu điểm: Chỉ cần tạo ra 1 tên cho method cùng thực hiện chức năng tương tự, bớt rối cho việc đặt tên (VD: sum1, sum2, sum3,...)
 	>>> Không thể nạp chồng phương thức (cùng số lượng tham số) nhưng khác kiểu trả về.
 	>>> Có thể nạp chồng phương thức kiểu static: https://www.geeksforgeeks.org/can-we-overload-or-override-static-methods-in-java/
 	>>> Không thể nạp chồng 2 phương thức khác keyword static (Cùng tham số): https://www.geeksforgeeks.org/can-we-overload-or-override-static-methods-in-java/
@@ -132,11 +137,26 @@ Abstract Class (Lớp trừu tượng)
 		+ Tránh trùng lặp code và tái sử dụng
 		+ Tăng cường tính bảo mật của chương trình, ứng dụng khi cung cấp cho người dùng.
 Interface
-	+ Interface là một bản thiết kế cho class để class tuân theo và thực thi. Interface chỉ chứa các abstract method và các fields ở dạng public static final.
+	+ Interface là một bản thiết kế cho class để class tuân theo và thực thi. Interface mặc định các abstract method và các fields ở dạng public static final.
+	+ Tương tự như abstract class, interface không thể tạo ra object.
 	+ Sử dụng từ khoá 'implements' để triển khai 1 interface từ 1 class khác.
 		VD: http://codepad.org/k5VTz3oN
-	+ 1 class có thể implemnts một lúc nhiều interface
+	+ 1 class có thể implemnts một lúc nhiều interface.
 		VD: http://codepad.org/Z9FwBKfP
+	+ 1 interface có thể extends (kế thừa) nhiều interface khác (Kế thừa mutiple, 1 interface con có nhiều interface cha).
+	+ Trong JDK 8 về sau. Một interface có thể gọi một phương thức mà không cần implements từ class thông qua đối tượng.
+		VD: https://www.geeksforgeeks.org/interfaces-in-java/
+	>>> Một lớp implements từ interface phải triển khai tất cả các method được định nghĩa trong interface.
+	>>> interface được dùng để kế thừa đa cấp, và dùng để đạt loosing coupling (https://en.wikipedia.org/wiki/Loose_coupling)
+	... 
+Polymorphism
+	+ Có 2 kiểu đa hình: Đa hình lúc biên dịch (compile) và đa hình lúc thực thi (runtime)
+	+ Thực hiện đa hình bằng cách nạp chồng (Overload) hoặc ghi đè (Override) phương thức.
+	+ Với đa hình trong lúc runtime do Override. Đa hình do JVM đảm nhận chứ k thuộc Compiler.
+	+ Đa hình lúc runtime không thể xảy ra với thành viên dữ liệu.
+		VD: https://viettuts.vn/java/tinh-da-hinh-trong-java
+	
+	
 	
 	
 		
