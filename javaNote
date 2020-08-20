@@ -148,6 +148,7 @@ Interface
 		VD: https://www.geeksforgeeks.org/interfaces-in-java/
 	>>> Một lớp implements từ interface phải triển khai tất cả các method được định nghĩa trong interface.
 	>>> interface được dùng để kế thừa đa cấp, và dùng để đạt loosing coupling (https://en.wikipedia.org/wiki/Loose_coupling)
+	*** Có 2 interface sort object thành phần data trong Java: https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/
 	... 
 Polymorphism
 	+ Có 2 kiểu đa hình: Đa hình lúc biên dịch (compile) và đa hình lúc thực thi (runtime)
@@ -155,6 +156,8 @@ Polymorphism
 	+ Với đa hình trong lúc runtime do Override. Đa hình do JVM đảm nhận chứ k thuộc Compiler.
 	+ Đa hình lúc runtime không thể xảy ra với thành viên dữ liệu.
 		VD: https://viettuts.vn/java/tinh-da-hinh-trong-java
+Nested và Inner Class trong Java
+	
 	
 	
 	
