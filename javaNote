@@ -8,6 +8,14 @@ Primitive data type:
 +float [32bit] EX: float a = 3.2f;
 +char [16bit] unicode
 
+>>> Khi đọc một chuỗi sau 1 số cần thêm 1 dòng đọc kí tự \n để tránh bị đọc nhầm.
+	VD: int a = scan.nextInt();
+	    String s = scan.nextInt(); => đọc dấu \n => Không đọc được chuỗi.
+	    //Fix:
+	    int a = scan.nextInt();
+	    scan.nextLine(); => đọc dấu \n (Skip \n)
+	    String s = scan.nextLine();
+
 FOR-EACH
 	for(int elements: arr){
 		//code
@@ -157,6 +165,7 @@ Polymorphism
 	+ Đa hình lúc runtime không thể xảy ra với thành viên dữ liệu.
 		VD: https://viettuts.vn/java/tinh-da-hinh-trong-java
 Nested và Inner Class trong Java
+	// Class lồng nhau (Nested class)
 	
 	
 	
