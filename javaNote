@@ -3,7 +3,7 @@ Primitive data type:
 +short [16bit] -32768 -> 32767;
 +int [32bit] -2^31 -> 2^31 -1;
 +long [64bit] -2^63 -> 2^63 -1;
-	//Vượt ra phạm vi của int nên khai báo: long ex = 214748212L;
+	//Vượt ra phạm vi của int cần khai báo: long ex = 214748212L;
 +double [64bit] EX: double a=3.2;
 +float [32bit] EX: float a = 3.2f;
 +char [16bit] unicode
@@ -54,7 +54,16 @@ CONSTRUCTOR (Có 3 kiểu)
 STRING
 	//String là một lớp trong Java, khác với primitive type (long, int, short, byte, double, char,...)
 	+ String là một chuỗi bất biến, không thể xoá, sửa, thay đổi.
+	+ Cách chương trình cấp phát vùng nhớ cho một lớp String: https://www.geeksforgeeks.org/how-to-initialize-and-compare-strings-in-java/
+	String s = "Direct"; và String s = new String("Direct"); sẽ khác nhau về cách tham chiếu giá trị.
 	+ Một số phương thức trong lớp String: https://ibb.co/pxf3Vpq
+	+ Một số điểm khác nhau giữa các kiểu so sánh 2 objects chuỗi
+		VD:
+		String s = new String("Hello world"); // s tham chiếu đến "Hello world" trong Heap
+		String test = "Hello world"; //test tham chiếu đến String pool are trong Heap
+		System.out.println(s.equals(test)); //boolean Output: true
+		System.out.println(s.compareTo(test)); //int Output: 0
+		System.out.println(s == test); //boolean Output: false ( but reference compare  (so sánh địa chỉ, ít dùng))
 	+ Document từ Oracle: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?fbclid=IwAR2JwZ4AJ6JGcvuSeaablfqq-cUDahBhqRM8peIcHj9Qgl7VmNYULMyVn1U
 ACCESS MODIFIER 
 	https://www.w3schools.com/java/java_modifiers.asp
