@@ -10,7 +10,7 @@ Primitive data type:
 
 >>> Khi đọc một chuỗi sau 1 số cần thêm 1 dòng đọc kí tự \n để tránh bị đọc nhầm.
 	VD: int a = scan.nextInt();
-	    String s = scan.nextInt(); => đọc dấu \n => Không đọc được chuỗi.
+	    String s = scan.nextLine(); => đọc dấu \n => Không đọc được chuỗi.
 	    //Fix:
 	    int a = scan.nextInt();
 	    scan.nextLine(); => đọc dấu \n (Skip \n)
@@ -54,16 +54,24 @@ CONSTRUCTOR (Có 3 kiểu)
 STRING
 	//String là một lớp trong Java, khác với primitive type (long, int, short, byte, double, char,...)
 	+ String là một chuỗi bất biến, không thể xoá, sửa, thay đổi.
-	+ Cách chương trình cấp phát vùng nhớ cho một lớp String: https://www.geeksforgeeks.org/how-to-initialize-and-compare-strings-in-java/
-	String s = "Direct"; và String s = new String("Direct"); sẽ khác nhau về cách tham chiếu giá trị.
+	+ Cách cấp phát vùng nhớ cho một lớp String: https://www.geeksforgeeks.org/how-to-initialize-and-compare-strings-in-java/
+	+ String s = "Direct"; và String s = new String("!Direct"); sẽ khác nhau về cách tham chiếu giá trị.
 	+ Một số phương thức trong lớp String: https://ibb.co/pxf3Vpq
+	+ Một số lưu ý sử dụng String, StringBuilder, StringBuffer:
+		* Nếu chuỗi không thay đổi trong suốt chương trình, dùng lớp String.
+		* Nếu chuỗi thay đổi, và được truy cập 1 luồng (Single Third). Dùng StringBuilder (StringBuilder k sync, k an toàn, nhưng xử lí nhanh hơn).
+		* Nếu chuỗi thay đổi, và được truy cập đa luồng (Multi Third). Dùng StringBuffer (StringBuffer có sync, an toàn hơn, nhưng xử lí chậm hơn).
+	+ Convert qua lại giữa các lớp String/StringBuilder/StringBuffer: https://www.geeksforgeeks.org/string-vs-stringbuilder-vs-stringbuffer-in-java/
+	+ Convert qua lại giữa các số-String, String-số: https://www.geeksforgeeks.org/different-ways-for-integer-to-string-conversions-in-java/
+	+ Khi cần xử lí các thành phần tiền tố, hậu tố, trung tố của một chuỗi
+		ta dùng lớp StringJoiner: https://www.geeksforgeeks.org/java-util-stringjoiner-java8/
 	+ Một số điểm khác nhau giữa các kiểu so sánh 2 objects chuỗi
 		VD:
 		String s = new String("Hello world"); // s tham chiếu đến "Hello world" trong Heap
-		String test = "Hello world"; //test tham chiếu đến String pool are trong Heap
-		System.out.println(s.equals(test)); //boolean Output: true
-		System.out.println(s.compareTo(test)); //int Output: 0
-		System.out.println(s == test); //boolean Output: false ( but reference compare  (so sánh địa chỉ, ít dùng))
+		String test = "Hello world"; //test tham chiếu đến String pool area trong Heap
+		System.out.println(s.equals(test)); //return: boolean Output: true (Ngoài ra còn có method equalsIgnoreCase, k phân biệt hoa thường)
+		System.out.println(s.compareTo(test)); //return: int Output: 0 (Ngoài ra còn có method compareToIgnoreCase, k phân biệt hoa thường)
+		System.out.println(s == test); //return: boolean Output: false ( but reference compare  (so sánh địa chỉ, ít dùng cho chuỗi)).
 	+ Document từ Oracle: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?fbclid=IwAR2JwZ4AJ6JGcvuSeaablfqq-cUDahBhqRM8peIcHj9Qgl7VmNYULMyVn1U
 ACCESS MODIFIER 
 	https://www.w3schools.com/java/java_modifiers.asp
