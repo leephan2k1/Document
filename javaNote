@@ -16,7 +16,9 @@ Primitive data type:
 	    scan.nextLine(); => đọc dấu \n (Skip \n)
 	    String s = scan.nextLine();
 >>> Định dạng một text ra console 
-	System.out.printf("%-15s%03d%n",s,x);
+	+ https://www.baeldung.com/java-printstream-printf
+	+ https://stackoverflow.com/questions/2538787/how-to-print-a-float-with-2-decimal-places-in-java
+	+ System.out.printf("%-15s%03d%n",s,x);
 	%-15s: in định dạng tiếp theo thụt vào 15 kí tự tính từ chuỗi đầu tiên
 	%03d: in ra số nguyên có đầy đủ 3 số, ko đủ thêm số 0 phía trước
 	%n: xuống dòng.
