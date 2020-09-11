@@ -86,10 +86,53 @@ ARRAY
 			}
 		return arr;
 		}
+ARRAYS CLASS ( lớp Arrays)
+	+
+	
 ARRAY LIST
-	ArrayList là một colection framework trong Java. ArrayList không truy cập phần tử dùng [] như array. Tuy nhiên, ArrayList có thể
+	+ ArrayList là một colection framework trong Java. ArrayList không truy cập phần tử dùng [] như array. Tuy nhiên, ArrayList có thể
 	sử dụng các method linh hoạt hơn array trong việc thêm, xoá, sửa.
-	ArrayList chỉ có thể chứa những object được khai báo, không thể chứa những kiểu nguyên thuỷ như array.
+	+ ArrayList chỉ có thể chứa những object được khai báo, không thể chứa những kiểu nguyên thuỷ như array.
+	+ array của ArrayList: (Sẽ bị Warning, khắc phục bằng cách dùng ArrayList của ArrayList) 
+		Đối với một mảng 2 chiều không biết kích thước của mỗi row là bao nhiêu, sử dụng ArrayList để implement mỗi row cho 2D array.
+		VD: https://www.geeksforgeeks.org/array-of-arraylist-in-java/?ref=rp
+			int n = 5; 
+        		ArrayList<Integer>[] al = new ArrayList[n]; 
+			for (int i = 0; i < n; i++) { 
+            			al[i] = new ArrayList<Integer>(); 
+        		} 
+			  for (int i = 0; i < n; i++) { 
+            			for (int j = 0; j < al[i].size(); j++) { 
+               				 System.out.print(al[i].get(j) + " "); 
+            			} 
+            			System.out.println(); 
+        		} 
+	+ ArrayList của ArrayList
+		VD: https://www.geeksforgeeks.org/arraylist-of-arraylist-in-java/
+		int n = 3;
+		ArrayList<	ArrayList<Integer>	> al = new ArrayList<	ArrayList<Integer>	>(n);
+		//Row 1
+		ArrayList<Integer> al_1 = new ArrayList<Integer>();
+		al_1.add(1); 
+       		al_1.add(2); 
+		al.add(al_1);
+		//Row 2
+		ArrayList<Integer> al_2 = new ArrayList<Integer>(); 
+        	a_2.add(5); 
+        	al.add(a_2); 
+  		//Row 3
+       	 	ArrayList<Integer> al_3 = new ArrayList<Integer>(); 
+        	al_3.add(10); 
+        	al_3.add(20); 
+        	al_3.add(30); 
+        	al.add(al_3);
+		for (int i = 0; i < aList.size(); i++) { 
+            		for (int j = 0; j < aList.get(i).size(); j++) { 
+                		System.out.print(aList.get(i).get(j) + " "); 
+           	 } 
+           	 System.out.println(); 
+        	} 
+	
 	
 ACCESS MODIFIER 
 	https://www.w3schools.com/java/java_modifiers.asp
