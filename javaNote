@@ -49,9 +49,31 @@ CONSTRUCTOR (Có 3 kiểu)
 		=> https://ibb.co/8jgcrVT
 	+ Constructor Parameterized (Tham số hoá)
 		Constructor overloading: https://ibb.co/42h4yQ8
-2 Quy tắc để khởi tạo 1 Constructor:
-	+ Cùng tên với tên Class.
-	+ Không có kiểu trả về.
+		
+	+ 2 Quy tắc để khởi tạo 1 Constructor:
+		+ Cùng tên với tên Class.
+		+ Không có kiểu trả về.
+	
+STATIC BLOCKS (Khối static) https://docs.oracle.com/javase/tutorial/java/javaOO/initial.html
+	+ Khối static dùng để khởi tạo, thực thi các fields, method, instance var,... khi class được load vào memory.
+	+ Khối static chỉ chạy một lần, sẽ chạy trước construct (Nếu có) và method main.
+	+ VD: https://www.geeksforgeeks.org/g-fact-79/
+		//CODE: 
+			class TestCase{
+				static int i = 0;
+				TestCase(){
+					System.out.println("Construct called");
+				}
+				static {
+					i = 10;
+					System.out.println("Static called");
+				}
+				public static void main(String[] args) {
+					TestCase t = new TestCase();
+					System.out.println(t.i);
+				}
+			}
+	 + Ngoài ra, còn có Initializer Block: https://www.geeksforgeeks.org/g-fact-26-the-initializer-block-in-java/
 	
 STRING
 	//String là một lớp trong Java, khác với primitive type (long, int, short, byte, double, char,...)
