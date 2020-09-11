@@ -112,9 +112,10 @@ ARRAYS CLASS ( lớp Arrays)
 	+
 	
 ARRAY LIST
-	+ ArrayList là một colection framework trong Java. ArrayList không truy cập phần tử dùng [] như array. Tuy nhiên, ArrayList có thể
-	sử dụng các method linh hoạt hơn array trong việc thêm, xoá, sửa.
+	+ ArrayList là một colection framework trong Java (API JAVA). ArrayList không truy cập phần tử dùng [] như array. Tuy nhiên, ArrayList có thể
+	sử dụng các method linh hoạt hơn array trong việc thêm, xoá.
 	+ ArrayList chỉ có thể chứa những object được khai báo, không thể chứa những kiểu nguyên thuỷ như array.
+	+ ArrayList cũng có thể xem như một Dynamic array, vì nó có thể tự resize (tăng kích thước khi thêm object item, giảm kích thước khi xoá object item)
 	+ array của ArrayList: (Sẽ bị Warning, khắc phục bằng cách dùng ArrayList của ArrayList) 
 		Đối với một mảng 2 chiều không biết kích thước của mỗi row là bao nhiêu, sử dụng ArrayList để implement mỗi row cho 2D array.
 		VD: https://www.geeksforgeeks.org/array-of-arraylist-in-java/?ref=rp
