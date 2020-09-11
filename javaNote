@@ -75,6 +75,22 @@ STRING
 		System.out.println(s.compareTo(test)); //return: int Output: 0 (Ngoài ra còn có method compareToIgnoreCase, k phân biệt hoa thường)
 		System.out.println(s == test); //return: boolean Output: false ( but reference compare  (so sánh địa chỉ, ít dùng cho chuỗi)).
 	+ Document từ Oracle: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?fbclid=IwAR2JwZ4AJ6JGcvuSeaablfqq-cUDahBhqRM8peIcHj9Qgl7VmNYULMyVn1U
+ARRAY
+	Một Object cũng có thể khởi tạo theo kiểu array
+		VD: ClassName[] ObjectName = new ClassName[size];
+		ObjectName[0] = new ClassName(Construct);
+	Một method trả về array.
+		VD: static int[] increase1(int[] arr){
+			for(int i = 0; i<arr.length; i++) {
+			arr[i]++;
+			}
+		return arr;
+		}
+ARRAY LIST
+	ArrayList là một colection framework trong Java. ArrayList không truy cập phần tử dùng [] như array. Tuy nhiên, ArrayList có thể
+	sử dụng các method linh hoạt hơn array trong việc thêm, xoá, sửa.
+	ArrayList chỉ có thể chứa những object được khai báo, không thể chứa những kiểu nguyên thuỷ như array.
+	
 ACCESS MODIFIER 
 	https://www.w3schools.com/java/java_modifiers.asp
 	+ abstract (Đối với class): Khi khởi tạo 1 abstract class, thì k thể khởi tạo đối tượng từ class mà chỉ có thể kế thừa.
