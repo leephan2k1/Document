@@ -97,6 +97,34 @@ STRING
 		System.out.println(s.compareTo(test)); //return: int Output: 0 (Ngoài ra còn có method compareToIgnoreCase, k phân biệt hoa thường)
 		System.out.println(s == test); //return: boolean Output: false ( but reference compare  (so sánh địa chỉ, ít dùng cho chuỗi)).
 	+ Document từ Oracle: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?fbclid=IwAR2JwZ4AJ6JGcvuSeaablfqq-cUDahBhqRM8peIcHj9Qgl7VmNYULMyVn1U
+DATE & TIME : 
+	+ Lớp Date và các method: https://www.tutorialspoint.com/java/java_date_time.htm
+	+ Khởi tạo lớp Date:
+		Date now = new Date();
+		System.out.println(now); 
+		Output: Sat Sep 12 21:47:01 ICT 2020 (Tại thời điểm biên dịch)
+	+ Lớp SimpleDateFormat: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html 
+	+ Ví dụ SimpleDateFormat class: (https://youtu.be/6cp4P4XZ9hE)
+	+ Lớp LocalDate (thường sử dụng, Java 8): https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html
+		VD: https://www.youtube.com/watch?v=82B7aXiED38
+		VD: Nhập ngày, tháng, năm conver sang thứ
+		int day = 5;
+		int month = 8;
+		int year = 2015;
+		VD: LocalDate date = LocalDate.of(year, month, day); //phuong thuc .of( nam, thang, ngay);
+		    String thu = date.getDayOfWeek().toString(); //phuong thuc getDayOfWeek (return type DayOfWeek) .toString() (Conver DayOfWeek sang String)
+		    System.out.println(thu);
+		    Output: WEDNESDAY
+		VD: Nhập vào ngày, tháng, năm. Tính số ngày tới giao thừa (31/12)
+			LocalDate date = LocalDate.now();
+			int res = date.lengthOfYear() - (date.getDayOfYear());
+			System.out.println("Con " + res +" ngay nua toi tet");	
+			
+	+ Chi tiết (Vietnamese): https://gpcoder.com/4062-date-time-trong-java-8/
+
+	
+
+	
 ARRAY
 	Một Object cũng có thể khởi tạo theo kiểu array
 		VD: ClassName[] ObjectName = new ClassName[size];
@@ -121,6 +149,7 @@ ARRAY LIST
 		VD: https://www.geeksforgeeks.org/array-of-arraylist-in-java/?ref=rp
 			int n = 5; 
         		ArrayList<Integer>[] al = new ArrayList[n]; 
+			// Khởi tạo mỗi row
 			for (int i = 0; i < n; i++) { 
             			al[i] = new ArrayList<Integer>(); 
         		} 
