@@ -49,9 +49,31 @@ CONSTRUCTOR (Có 3 kiểu)
 		=> https://ibb.co/8jgcrVT
 	+ Constructor Parameterized (Tham số hoá)
 		Constructor overloading: https://ibb.co/42h4yQ8
-2 Quy tắc để khởi tạo 1 Constructor:
-	+ Cùng tên với tên Class.
-	+ Không có kiểu trả về.
+		
+	+ 2 Quy tắc để khởi tạo 1 Constructor:
+		+ Cùng tên với tên Class.
+		+ Không có kiểu trả về.
+	
+STATIC BLOCKS (Khối static) https://docs.oracle.com/javase/tutorial/java/javaOO/initial.html
+	+ Khối static dùng để khởi tạo, thực thi các fields, method, instance var,... khi class được load vào memory.
+	+ Khối static chỉ chạy một lần, sẽ chạy trước construct (Nếu có) và method main.
+	+ VD: https://www.geeksforgeeks.org/g-fact-79/
+		//CODE: 
+			class TestCase{
+				static int i = 0;
+				TestCase(){
+					System.out.println("Construct called");
+				}
+				static {
+					i = 10;
+					System.out.println("Static called");
+				}
+				public static void main(String[] args) {
+					TestCase t = new TestCase();
+					System.out.println(t.i);
+				}
+			}
+	 + Ngoài ra, còn có Initializer Block: https://www.geeksforgeeks.org/g-fact-26-the-initializer-block-in-java/
 	
 STRING
 	//String là một lớp trong Java, khác với primitive type (long, int, short, byte, double, char,...)
@@ -75,6 +97,95 @@ STRING
 		System.out.println(s.compareTo(test)); //return: int Output: 0 (Ngoài ra còn có method compareToIgnoreCase, k phân biệt hoa thường)
 		System.out.println(s == test); //return: boolean Output: false ( but reference compare  (so sánh địa chỉ, ít dùng cho chuỗi)).
 	+ Document từ Oracle: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?fbclid=IwAR2JwZ4AJ6JGcvuSeaablfqq-cUDahBhqRM8peIcHj9Qgl7VmNYULMyVn1U
+DATE & TIME : 
+	+ Lớp Date và các method: https://www.tutorialspoint.com/java/java_date_time.htm
+	+ Khởi tạo lớp Date:
+		Date now = new Date();
+		System.out.println(now); 
+		Output: Sat Sep 12 21:47:01 ICT 2020 (Tại thời điểm biên dịch)
+	+ Lớp SimpleDateFormat: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html 
+	+ Ví dụ SimpleDateFormat class: (https://youtu.be/6cp4P4XZ9hE)
+	+ Lớp LocalDate (thường sử dụng, Java 8): https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html
+		VD: https://www.youtube.com/watch?v=82B7aXiED38
+		VD: Nhập ngày, tháng, năm conver sang thứ
+		int day = 5;
+		int month = 8;
+		int year = 2015;
+		VD: LocalDate date = LocalDate.of(year, month, day); //phuong thuc .of( nam, thang, ngay);
+		    String thu = date.getDayOfWeek().toString(); //phuong thuc getDayOfWeek (return type DayOfWeek) .toString() (Conver DayOfWeek sang String)
+		    System.out.println(thu);
+		    Output: WEDNESDAY
+		VD: Nhập vào ngày, tháng, năm. Tính số ngày tới giao thừa (31/12)
+			LocalDate date = LocalDate.now();
+			int res = date.lengthOfYear() - (date.getDayOfYear());
+			System.out.println("Con " + res +" ngay nua toi tet");	
+			
+	+ Chi tiết (Vietnamese): https://gpcoder.com/4062-date-time-trong-java-8/
+
+	
+
+	
+ARRAY
+	Một Object cũng có thể khởi tạo theo kiểu array
+		VD: ClassName[] ObjectName = new ClassName[size];
+		ObjectName[0] = new ClassName(Construct);
+	Một method trả về array.
+		VD: static int[] increase1(int[] arr){
+			for(int i = 0; i<arr.length; i++) {
+			arr[i]++;
+			}
+		return arr;
+		}
+ARRAYS CLASS ( lớp Arrays)
+	+
+	
+ARRAY LIST
+	+ ArrayList là một colection framework trong Java (API JAVA). ArrayList không truy cập phần tử dùng [] như array. Tuy nhiên, ArrayList có thể
+	sử dụng các method linh hoạt hơn array trong việc thêm, xoá.
+	+ ArrayList chỉ có thể chứa những object được khai báo, không thể chứa những kiểu nguyên thuỷ như array.
+	+ ArrayList cũng có thể xem như một Dynamic array, vì nó có thể tự resize (tăng kích thước khi thêm object item, giảm kích thước khi xoá object item)
+	+ array của ArrayList: (Sẽ bị Warning, khắc phục bằng cách dùng ArrayList của ArrayList) 
+		Đối với một mảng 2 chiều không biết kích thước của mỗi row là bao nhiêu, sử dụng ArrayList để implement mỗi row cho 2D array.
+		VD: https://www.geeksforgeeks.org/array-of-arraylist-in-java/?ref=rp
+			int n = 5; 
+        		ArrayList<Integer>[] al = new ArrayList[n]; 
+			// Khởi tạo mỗi row
+			for (int i = 0; i < n; i++) { 
+            			al[i] = new ArrayList<Integer>(); 
+        		} 
+			  for (int i = 0; i < n; i++) { 
+            			for (int j = 0; j < al[i].size(); j++) { 
+               				 System.out.print(al[i].get(j) + " "); 
+            			} 
+            			System.out.println(); 
+        		} 
+	+ ArrayList của ArrayList
+		VD: https://www.geeksforgeeks.org/arraylist-of-arraylist-in-java/
+		int n = 3;
+		ArrayList<	ArrayList<Integer>	> al = new ArrayList<	ArrayList<Integer>	>(n);
+		//Row 1
+		ArrayList<Integer> al_1 = new ArrayList<Integer>();
+		al_1.add(1); 
+       		al_1.add(2); 
+		al.add(al_1);
+		//Row 2
+		ArrayList<Integer> al_2 = new ArrayList<Integer>(); 
+        	a_2.add(5); 
+        	al.add(a_2); 
+  		//Row 3
+       	 	ArrayList<Integer> al_3 = new ArrayList<Integer>(); 
+        	al_3.add(10); 
+        	al_3.add(20); 
+        	al_3.add(30); 
+        	al.add(al_3);
+		for (int i = 0; i < aList.size(); i++) { 
+            		for (int j = 0; j < aList.get(i).size(); j++) { 
+                		System.out.print(aList.get(i).get(j) + " "); 
+           	 } 
+           	 System.out.println(); 
+        	} 
+	
+	
 ACCESS MODIFIER 
 	https://www.w3schools.com/java/java_modifiers.asp
 	+ abstract (Đối với class): Khi khởi tạo 1 abstract class, thì k thể khởi tạo đối tượng từ class mà chỉ có thể kế thừa.
