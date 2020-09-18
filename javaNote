@@ -36,6 +36,26 @@ LABEL BREAK
 			}
 		}
 		// code
+EXCEPTION (Xử lí ngoại lệ):
+	 Syntax: try {
+  			//  Block of code to try
+		}
+		catch(Exception e) {
+  			//  Block of code to handle errors
+		}finaly{ // Có thể có hoặc ko.
+			// Block of code default
+		}
+	 + Exception dùng để xử lí lỗi do lập trình viên, lỗi có thể do input đưa vào không hợp lệ hoặc dữ liệu không lường trước được.
+	 + Khác với if-else. Khối lệnh try sẽ luôn thực thi trước. Ngoài ra, có thể dùng từ khóa " finally " để bất chấp ngoại lệ ở catch 
+	 + Dùng từ khóa 'throw' để tạo một custom errors. throw dùng chung với các exception type được cung cấp sẵn trong java.
+	 Refference: https://www.geeksforgeeks.org/types-of-exception-in-java-with-examples/
+	 VD:     if (age < 18) {
+      			throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+    		}
+   		 else {
+     			 System.out.println("Access granted - You are old enough!");
+    		}
+  
 
 CONSTRUCTOR (Có 3 kiểu)
 	// Constructor không thể là một abstract, static hoặc final.
