@@ -126,6 +126,8 @@ DATE & TIME :
 	+ Lớp SimpleDateFormat: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html 
 	+ Ví dụ SimpleDateFormat class: (https://youtu.be/6cp4P4XZ9hE)
 	+ Lớp LocalDate (thường sử dụng, Java 8): https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html
+	+ Format trong LocalDate: https://howtodoinjava.com/java/date-time/localdate-format-example/
+		+ Method trong DateTimeFormatter Class: https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 		VD: https://www.youtube.com/watch?v=82B7aXiED38
 		VD: Nhập ngày, tháng, năm conver sang thứ
 		int day = 5;
